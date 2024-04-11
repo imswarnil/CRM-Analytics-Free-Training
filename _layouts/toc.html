@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body>
+    {% include navbar.html %}
+
+    <div class="hero min-h-80 bg-base-200">
+      <div class="hero-content text-center">
+        <div class="max-w-full">
+          <h1 class="text-5xl font-bold text-left">
+            {{ site.title | default: site.github.repository_name }}
+          </h1>
+          <p class="py-2 text-left">
+            {{ site.description | default: site.github.project_tagline }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto">
+      <div class="flex flex-wrap -mx-4" id="content">
+        <div class="w-full lg:w-1/4 px-4">
+          <!-- Sidebar -->
+          <div class="sticky top-0">
+            <h2 class="text-2xl font-bold mb-4">Table of Contents</h2>
+            <ul
+              class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+            >
+              {% for lab in site.labs %}
+              <li>
+                <div class="timeline-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <div class="timeline-start md:text-end mb-10">
+                  <div class="indicator">
+                    <div class="indicator-item indicator-bottom">
+                      <a href="{{ lab.url }}" class="btn btn-primary">Apply</a>
+                    </div>
+                    <div class="card border mt-4">
+                      <div class="card-body p-6">
+                        <h2 class="card-title">{{ lab.title }}</h2>
+                        <p>{{ lab.description }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="w-full lg:w-3/4 px-4">
+          <!-- Main Content -->
+          <!-- You can add your main content here -->
+        </div>
+      </div>
+    </div>
+
+    {% include footer_row.html %} {% include js.html %}
+  </body>
+</html>

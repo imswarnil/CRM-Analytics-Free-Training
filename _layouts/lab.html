@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    {% include head.html %}
+  </head>
+  <body class="font-sans antialiased bg-gray-100">
+    {% include navbar.html %}
+    <!-- Page Content -->
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="col-span-2 mt-5">
+          <div class="bg-white rounded-lg p-6 mb-6">
+            <h1 class="text-2xl font-bold mb-4">
+              <small> Tutorial {{ page.number }}</small><br />{{ page.title }}
+            </h1>
+            {{ content }}
+          </div>
+
+          <div class="container mx-auto">
+            {% if page.previous %}
+            <div class="join grid grid-cols-2 mt-8 mb-8">
+              <a
+                href="{{ page.previous.url | relative_url }}"
+                class="join-item btn btn-outline"
+              >
+                Tutorial {{ page.previous.number }}: {{ page.previous.title }}
+              </a>
+            </div>
+            {% else %}
+            <div class="join grid grid-cols-2 mt-8 mb-8">
+              <a
+                href="{{ '/toc.html' | relative_url }}"
+                class="join-item btn btn-outline"
+              >
+                Table of Contents
+              </a>
+            </div>
+            {% endif %} {% if page.next %}
+            <div class="join grid grid-cols-2 mt-8 mb-8">
+              <a
+                href="{{ page.next.url | relative_url }}"
+                class="join-item btn btn-outline"
+              >
+                Tutorial {{ page.next.number }}: {{ page.next.title }}
+              </a>
+            </div>
+            {% endif %}
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h1 class="text-2xl font-bold mb-4">Comments</h1>
+            <!-- Your comments section goes here -->
+          </div>
+        </div>
+
+        <div class="col-span-1">
+          <div class="bg-white rounded-lg p-6 mb-6 mt-5">
+            <h1 class="text-2xl font-bold mb-4">Sidebar</h1>
+            <ul class="steps steps-vertical">
+              {% for lab in site.labs %} {% assign active = false %} {% if
+              page.url == lab.url %} {% assign active = true %} {% endif %}
+              <li class="step{% if active %} step-primary{% endif %}">
+                <a href="{{ lab.url }}">{{ lab.number }}. {{ lab.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg p-6">
+            <h1 class="text-2xl font-bold mb-4">Related Tutorials</h1>
+            {% assign total_posts = site.labs | size %} {% assign
+            current_page_number = page.number %} {% assign completion_percentage
+            = current_page_number | times: 100 | divided_by: total_posts %}
+
+            <div class="stats shadow">
+              <div class="stat">
+                <div class="stat-title">Total Page Views</div>
+                <div class="stat-value">89,400</div>
+                <div class="stat-desc">21% more than last month</div>
+              </div>
+
+              <div class="stat">
+                <div class="stat-title">Project Completion</div>
+                <div class="stat-value">{{ completion_percentage }}%</div>
+                <div class="stat-desc">Based on current progress</div>
+              </div>
+            </div>
+
+            {% include adsense.html type="square" %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+
+    {% include footer_row.html %} {% include js.html %}
+  </body>
+</html>

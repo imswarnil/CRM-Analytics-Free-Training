@@ -1,0 +1,32 @@
+title: Salesforce CRMA Training
+keyword : CRM Analytics
+email: imswarnil@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Container Immersion is a guided tour that walks through the fundamentals of
+  Docker, inspired by the premise that to know a thing is to do it.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+google_analytics: UA-36190034-3
+data-ad-client: ca-pub-1291242080282540
+
+collections:
+  labs:
+    output: true
+
+# Build settings
+markdown: kramdown
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - CONTRIBUTING.md
+
+sass:
+    sass_dir: assets/_sass
+
