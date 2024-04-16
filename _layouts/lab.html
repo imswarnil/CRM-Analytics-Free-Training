@@ -11,7 +11,7 @@
         <div class="col-span-2 mt-5">
           <div class="bg-white rounded-lg p-6 mb-6">
             <h1 class="text-2xl font-bold mb-4">
-              <small> Tutorial {{ page.number }}</small><br />{{ page.title }}
+              <small class="text-sm	"> Tutorial {{ page.number }}</small><br /><span class="text-4xl mt-5	">{{ page.title }}</span>
             </h1>
             {{ content }}
           </div>
@@ -53,7 +53,34 @@
           </div>
         </div>
 
-        <div class="col-span-1">
+        <div class="col-span-1 mt-5 ">
+          <div class="sticky top-10">
+  
+            <div role="tablist" class="tabs tabs-bordered bg-white rounded-lg mt-5 mb-5">
+              <input type="radio" name="my_tabs_1" role="tab" class="tab" aria-label="Tab 1" />
+              <div role="tabpanel" class="tab-content p-10">Tab content 1</div>
+            
+              <input type="radio" name="my_tabs_1" role="tab" class="tab" aria-label="Tab 2" checked />
+              <div role="tabpanel" class="tab-content p-10">Tab content 2</div>
+            
+              <input type="radio" name="my_tabs_1" role="tab" class="tab" aria-label="Tab 3" />
+              <div role="tabpanel" class="tab-content p-10">Tab content 3</div>
+            </div>
+
+          <div class="bg-transparent rounded-lg ">
+            {% assign total_posts = site.labs | size %} {% assign
+            current_page_number = page.number %} {% assign completion_percentage
+            = current_page_number | times: 100 | divided_by: total_posts %}
+
+            <div class="stats shadow w-full">
+              <div class="stat">
+                <div class="stat-title">Project Completion</div>
+                <div class="stat-value">{{ completion_percentage }}%</div>
+                <div class="stat-desc">Based on current progress</div>
+              </div>
+            </div>
+          </div>
+
           <div class="bg-white rounded-lg p-6 mb-6 mt-5">
             <h1 class="text-2xl font-bold mb-4">Sidebar</h1>
             <ul class="steps steps-vertical">
@@ -65,31 +92,9 @@
               {% endfor %}
             </ul>
           </div>
-
-          <div class="bg-white rounded-lg p-6">
-            <h1 class="text-2xl font-bold mb-4">Related Tutorials</h1>
-            {% assign total_posts = site.labs | size %} {% assign
-            current_page_number = page.number %} {% assign completion_percentage
-            = current_page_number | times: 100 | divided_by: total_posts %}
-
-            <div class="stats shadow">
-              <div class="stat">
-                <div class="stat-title">Total Page Views</div>
-                <div class="stat-value">89,400</div>
-                <div class="stat-desc">21% more than last month</div>
-              </div>
-
-              <div class="stat">
-                <div class="stat-title">Project Completion</div>
-                <div class="stat-value">{{ completion_percentage }}%</div>
-                <div class="stat-desc">Based on current progress</div>
-              </div>
-            </div>
-
-            {% include adsense.html type="square" %}
-          </div>
         </div>
       </div>
+    </div>
     </div>
     <!-- /.container -->
 

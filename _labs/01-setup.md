@@ -45,7 +45,3 @@ https://cloud.docker.com/
 
 For more examples and ideas, visit:
 https://docs.docker.com/engine/userguide/
-
-```
-
-```

@@ -7,127 +7,102 @@
   <body class="font-sans antialiased">
     <main id="top">
       {% include navbar.html %}
-      <!-- Page Content -->
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h1 class="text-4xl font-bold mb-4">
-              {{ site.title | default: site.github.repository_name }}
-            </h1>
-            <h2 class="text-lg font-semibold mb-2">
-              Start your learning journey with our tutorial-based {{
-              site.keyword }} training.
-            </h2>
-            <h2 class="text-lg mb-6">
-              {{ site.description | default: site.github.project_tagline }}
-            </h2>
-            {% include adsense.html type="top-leaderboard" %}
-            <img
-              class="h-24 w-24 mb-4"
-              src="../files/img/CRM-Analytics-Transparent.png"
-              alt="Docker logo"
-            />
-            <p class="leading-relaxed mb-4">
-              Docker is a powerful tool for managing and interacting with Linux
-              Containers. Understanding its features and capabilities opens new
-              workflows to software developers, and can change the way code is
-              developed, tested, and released. The best way to learn Docker is
-              to experience it first-hand.
-            </p>
-            <div class="text-right">
-              <a
-                href="{{ '/labs/01-setup.html' | relative_url }}"
-                class="btn btn-primary btn-lg"
-                ><i class="fa fa-arrow-circle-right"></i> Begin Your Training</a
-              >
+      <div class="hero min-h-[450px] bg-base-200">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">Hello there</h1>
+            <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <button class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col w-full">
+        <div class="divider"></div>
+      </div>
+
+      <div class="container mx-auto">
+        <div class="flex flex-wrap -mx-4">
+          {% for lab in site.labs %}
+          <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-6">
+            <div class="card bg-base-100 shadow-xl animate__animated animate__fadeInUp">
+              <a href="{{ lab.url }}">
+                <figure class="px-10 pt-10">
+                  <span class="text-5xl font-bold text-primary">{{ lab.number }}</span>
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-xl font-bold">{{ lab.title }}</h2>
+                  <p>{{ lab.description }}</p>
+                  <div class="card-actions">
+                    <button class="btn btn-primary">Start Learning</button>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
-          <div class="text-left">
-            <p class="mb-4">
-              Container Immersion is an open source project. To contribute,
-              visit our
-              <a
-                href="https://github.com/mkasberg/container-immersion"
-                class="underline"
-                ><i class="fa fa-github"></i> Project Page</a
-              >.
-            </p>
-            <p class="mb-4">
-              Container Immersion is inspired by
-              <a href="http://gitimmersion.com/" class="underline"
-                >Git Immersion</a
-              >, an excellent immersion-style tutorial for Git.
-            </p>
-            <p class="mb-4">
-              Container Immersion is free to use and modify under the
-              <a
-                href="https://github.com/mkasberg/container-immersion/blob/master/LICENSE"
-                class="underline"
-                >MIT License</a
-              >. Our logo is based on the whale emoji from
-              <a href="https://github.com/twitter/twemoji" class="underline"
-                >Twemoji</a
-              >
-              (licensed under
-              <a
-                href="https://creativecommons.org/licenses/by/4.0/"
-                class="underline"
-                >CC-BY 4.0</a
-              >).
-            </p>
+          {% endfor %}
+        </div>
+      </div>
+      
+
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div class="w-1/4 px-4">
+            <!-- Content for column 1 -->
+            <div class="bg-gray-200 p-4">
+              <h2 class="text-xl font-bold">Column 1</h2>
+              <p>This is the content for column 1.</p>
+            </div>
+          </div>
+          <div class="w-1/4 px-4">
+            <!-- Content for column 2 -->
+            <div class="bg-gray-200 p-4">
+              <h2 class="text-xl font-bold">Column 2</h2>
+              <p>This is the content for column 2.</p>
+            </div>
+          </div>
+          <div class="w-1/4 px-4">
+            <!-- Content for column 3 -->
+            <div class="bg-gray-200 p-4">
+              <h2 class="text-xl font-bold">Column 3</h2>
+              <p>This is the content for column 3.</p>
+            </div>
+          </div>
+          <div class="w-1/4 px-4">
+            <!-- Content for column 4 -->
+            <div class="bg-gray-200 p-4">
+              <h2 class="text-xl font-bold">Column 4</h2>
+              <p>This is the content for column 4.</p>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Hero Section -->
-      <div class="container-fluid text-center mt-5">
-        <h1 class="text-4xl font-bold mb-4">
-          Master CRM Analytics with Step-by-Step Tutorials
-        </h1>
-        <p class="text-lg font-semibold mb-4">
-          Unlock the power of data-driven decisions with our comprehensive
-          training.
-        </p>
-        <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+      
+      
+      
+      
+      <div class="flex justify-center my-8">
+        <button class="btn btn-ghost btn-primary text-2xl">Start</button>
       </div>
-
-      <!-- Features Section -->
-      <div class="container mt-5">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="text-center">
-            <h2 class="text-2xl font-bold mb-2">Bootstrap Integration</h2>
-            <p class="mb-4">
-              Experience a responsive and user-friendly learning interface,
-              courtesy of Bootstrap's powerful framework.
-            </p>
-          </div>
-          <div class="text-center">
-            <h2 class="text-2xl font-bold mb-2">Step-by-Step Guidance</h2>
-            <p class="mb-4">
-              Master each aspect of CRM analytics with detailed, sequential
-              tutorials that cater to various skill levels.
-            </p>
-          </div>
-          <div class="text-center">
-            <h2 class="text-2xl font-bold mb-2">Interactive Learning</h2>
-            <p class="mb-4">
-              Utilize Bootstrap's interactive components to enhance your
-              hands-on experience and reinforce your understanding.
-            </p>
-          </div>
+      
+      <div class="flex justify-center my-8">
+        <button class="btn btn-ghost btn-primary text-2xl">Donate</button>
+      </div>
+      
+      <div class="sponsor-section bg-base-300 py-12">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-4">Support Our Work</h2>
+          <p class="text-lg">Your support helps us continue creating valuable content. Consider making a donation to keep us going!</p>
+          <button class="btn btn-primary mt-6">Donate Now</button>
         </div>
       </div>
-
-      <!-- Community Section -->
-      <div class="container-fluid bg-light text-center py-5">
-        <h2 class="text-4xl font-bold mb-2">Join Our Learning Community</h2>
-        <p class="text-lg mb-4">
-          Discuss, share insights, and collaborate with other enthusiasts on
-          your CRM analytics journey.
-        </p>
-        <a href="#" class="btn btn-secondary btn-lg">Join Now</a>
-      </div>
-    </main>
+      
+      <footer class="footer bg-base-200">
+        <div class="container mx-auto py-8">
+          <!-- Footer content goes here -->
+        </div>
+      </footer>
+      
 
     {% include footer_row.html %} {% include js.html %}
   </body>
