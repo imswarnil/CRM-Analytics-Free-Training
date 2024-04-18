@@ -4,18 +4,27 @@
     {% include head.html %}
   </head>
 
-  <body class="font-sans antialiased">
-    <main id="top">
+  <body class="font-sans antialiased bg-gray-100">
       {% include navbar.html %}
-      <div class="hero min-h-[450px] bg-base-200">
-        <div class="hero-content text-center">
-          <div class="max-w-md">
-            <h1 class="text-5xl font-bold">Hello there</h1>
-            <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            <button class="btn btn-primary">Get Started</button>
-          </div>
+      <main class="container mx-auto py-7 ">
+      <section class="bg-primary text-white rounded-lg">
+        <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+            <div class="flex flex-col justify-center p-6 text-center rounded-lg lg:max-w-md xl:max-w-lg lg:text-left">
+                <h1 class="text-5xl font-bold leading-tight sm:text-6xl">{{site.title}}
+                    <span class="text-blue-300">Learn</span>Free
+                </h1>
+                <p class="mt-6 mb-8 text-lg sm:mb-12">{{site.description}}
+                </p>
+                <div class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+                    <a rel="noopener noreferrer" href="#" class="px-8 py-3 text-lg font-semibold rounded bg-white text-blue-500">Suspendisse</a>
+                    <a rel="noopener noreferrer" href="#" class="px-8 py-3 text-lg font-semibold border border-white rounded">Malesuada</a>
+                </div>
+            </div>
+            <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+                <img src="https://img.freepik.com/premium-vector/hand-pointing-computer-screen-display-with-various-diagrams-charts-graphs-concept-statistical-data-analysis-business-analytics-monochrome-vector-illustration-line-art-style_198278-5832.jpg" alt="" class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+            </div>
         </div>
-      </div>
+    </section>
       
       <div class="flex flex-col w-full">
         <div class="divider"></div>
@@ -96,12 +105,7 @@
           <button class="btn btn-primary mt-6">Donate Now</button>
         </div>
       </div>
-      
-      <footer class="footer bg-base-200">
-        <div class="container mx-auto py-8">
-          <!-- Footer content goes here -->
-        </div>
-      </footer>
+    </main>
       
 
     {% include footer_row.html %} {% include js.html %}

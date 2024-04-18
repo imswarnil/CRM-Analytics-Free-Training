@@ -2,6 +2,8 @@
 layout: lab
 number: 1
 title: "Setup"
+description : Hello from Docker!This message shows that your installation appears to be working correctly
+image : <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="w-16 h-16"><path d="M472,16H168a24,24,0,0,0-24,24V344a24,24,0,0,0,24,24H472a24,24,0,0,0,24-24V40A24,24,0,0,0,472,16Zm-8,320H176V48H464Z"></path><path d="M112,400V80H80V408a24,24,0,0,0,24,24H432V400Z"></path><path d="M48,464V144H16V472a24,24,0,0,0,24,24H368V464Z"></path></svg>
 ---
 
 ### Goals

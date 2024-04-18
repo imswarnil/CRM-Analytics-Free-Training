@@ -2,9 +2,8 @@ title: Salesforce CRMA Training
 keyword: CRM Analytics
 email: imswarnil@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Container Immersion is a guided tour that walks through the fundamentals of
-  Docker, inspired by the premise that to know a thing is to do it.
-baseurl: "" # the subpath of your site, e.g. /blog
+  Salesforce CRMA Training is your comprehensive guide to mastering CRM Analytics using Salesforce tools. Dive into the world of customer relationship management (CRM) analytics and unlock the potential of data-driven decision-making for business growth and success.
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://crma.imswarnil.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username: jekyll
@@ -29,3 +28,66 @@ exclude:
 
 sass:
   sass_dir: assets/_sass
+
+# SEO
+seo:
+  title: "Salesforce CRMA Training - Free CRM Analytics Training by Salesforce"
+  description: "Master CRM Analytics with Salesforce CRMA Training. Learn data visualization, reporting, dashboard creation, and more. Dive into CRM Analytics and unlock business growth opportunities."
+  author: "Your Name"
+  language: "en"
+  keywords: "Salesforce, CRM Analytics, Data Visualization, Reporting, Dashboards, Business Growth, Data-driven Decision Making"
+  image: "/assets/images/cover.jpg"
+  url: "https://crma.imswarnil.com"
+  canonical_url: "https://crma.imswarnil.com"
+  robots: "index, follow"
+  og_title: "Salesforce CRMA Training - Free CRM Analytics Training by Salesforce"
+  og_description: "Master CRM Analytics with Salesforce CRMA Training. Learn data visualization, reporting, dashboard creation, and more. Dive into CRM Analytics and unlock business growth opportunities."
+  og_type: "website"
+  og_image: "/assets/images/cover.jpg"
+  og_url: "https://crma.imswarnil.com"
+  twitter_card: "summary_large_image"
+  twitter_title: "Salesforce CRMA Training - Free CRM Analytics Training by Salesforce"
+  twitter_description: "Master CRM Analytics with Salesforce CRMA Training. Learn data visualization, reporting, dashboard creation, and more. Dive into CRM Analytics and unlock business growth opportunities."
+  twitter_image: "/assets/images/cover.jpg"
+  fb_admins: "your_facebook_admin_id"
+  fb_app_id: "your_facebook_app_id"
+
+# Other Data
+sitemap:
+  include:
+    - "/index.html"
+    - "/toc.html"
+    - "/about.html"
+    - "/contact.html"
+    - "/introduction.html"
+    - "/salesforce-data-analytics.html"
+    - "/data-visualization.html"
+    - "/reports-dashboards.html"
+    - "/advanced-analytics.html"
+    - "/ai-crm-analytics.html"
+    - "/terms.html"
+    - "/privacy.html"
+
+breadcrumbs:
+  - name: "Home"
+    url: "/"
+  - name: "Salesforce CRMA Training"
+    url: "/"
+
+table_of_contents:
+  - title: "Introduction to CRM Analytics"
+    url: "/introduction.html"
+  - title: "Understanding Salesforce Data and Analytics"
+    url: "/salesforce-data-analytics.html"
+  - title: "Data Visualization with Salesforce"
+    url: "/data-visualization.html"
+  - title: "Creating Reports and Dashboards in Salesforce"
+    url: "/reports-dashboards.html"
+  - title: "Advanced Analytics and Predictive Modeling in Salesforce"
+    url: "/advanced-analytics.html"
+  - title: "Leveraging AI for CRM Analytics"
+    url: "/ai-crm-analytics.html"
+  - title: "Terms and Conditions"
+    url: "/terms.html"
+  - title: "Privacy Policy"
+    url: "/privacy.html"

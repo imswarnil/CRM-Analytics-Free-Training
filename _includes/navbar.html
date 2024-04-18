@@ -1,35 +1,41 @@
-<div class="navbar bg-base-100">
-    <div class="navbar-start">
-      <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-        </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-          {% for lab in site.labs %}
-          <li>
-            <a href="{{ lab.url }}">
-              <span class="badge badge-xs badge-primary">{{ lab.number }}</span>
-              {{ lab.title }}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
+<div class="container mx-auto  mt-5">
+  <div class="navbar bg-base-100 p-4 rounded-box">
+      <div class="navbar-start">
+          <a href="/" class="btn btn-ghost text-xl">{{ site.title }}</a>
       </div>
-    </div>
-    <div class="navbar-center">
-      <a class="btn btn-ghost text-xl">{{ site.title }}</a>
-    </div>
-    <div class="navbar-end">
-      <a href="/" class="btn btn-ghost">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-            <path fill-rule="evenodd" d="M9.53 2.47a.75.75 0 0 1 0 1.06L4.81 8.25H15a6.75 6.75 0 0 1 0 13.5h-3a.75.75 0 0 1 0-1.5h3a5.25 5.25 0 1 0 0-10.5H4.81l4.72 4.72a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
-          </svg>          
-        </a>
-      <a href="/toc" class="btn btn-ghost btn-circle">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                <path d="M5.625 3.75a2.625 2.625 0 1 0 0 5.25h12.75a2.625 2.625 0 0 0 0-5.25H5.625ZM3.75 11.25a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75ZM3 15.75a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75ZM3.75 18.75a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Z" />
-            </svg>              
-    </a>
-    </div>
+      <div class="navbar-end">
+          {% if page.url == "/" %}
+          <!-- Start Now button for homepage -->
+          <a href="/toc" class="btn btn-primary btn-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+              </svg> Start
+          </a>
+          {% else %}
+          <!-- Button with home icon for other pages -->
+          <a href="/" class="btn btn-ghost btn-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path fill-rule="evenodd" d="M9.53 2.47a.75.75 0 0 1 0 1.06L4.81 8.25H15a6.75 6.75 0 0 1 0 13.5h-3a.75.75 0 0 1 0-1.5h3a5.25 5.25 0 1 0 0-10.5H4.81l4.72 4.72a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
+              </svg> Back
+          </a>
+          {% endif %}
+          <div class="dropdown dropdown-left">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                {% for lab in site.labs %}
+                <li>
+                    <a href="{{ lab.url }}">
+                        <span class="badge badge-xs badge-primary">{{ lab.number }}</span>
+                        {{ lab.title }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+      </div>
   </div>
-  
+</div>
