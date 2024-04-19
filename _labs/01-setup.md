@@ -12,6 +12,8 @@ To setup Docker on your machine.
 
 ## Install Docker
 
+ {% include adsense.html type="article" %}
+
 Install Docker CE for
 [Windows](https://docs.docker.com/docker-for-windows/install/),
 [Mac](https://docs.docker.com/docker-for-mac/install/), or
@@ -30,6 +32,8 @@ it produces the welcome message, you're ready to move on to the next lab.
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
 
+ {% include adsense.html type="multiplex" %}
+
 To generate this message, Docker took the following steps:
 
 1.  The Docker client contacted the Docker daemon.
@@ -39,11 +43,11 @@ To generate this message, Docker took the following steps:
 4.  The Docker daemon streamed that output to the Docker client, which sent it
     to your terminal.
 
-To try something more ambitious, you can run an Ubuntu container with:
-$ docker run -it ubuntu bash
+To try something more ambitious, you can run an Ubuntu container with
+
+ {% include adsense.html type="in-feed" %}
 
 Share images, automate workflows, and more with a free Docker ID:
-https://cloud.docker.com/
+https://cloud.docker.com/ 
 
-For more examples and ideas, visit:
-https://docs.docker.com/engine/userguide/
+

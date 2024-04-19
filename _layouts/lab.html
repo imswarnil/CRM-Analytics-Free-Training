@@ -57,7 +57,6 @@
 
         <div class="col-span-1 mt-5 ">
           <div class="sticky top-10">
-  
           <div class="bg-transparent rounded-lg ">
             {% assign total_posts = site.labs | size %} {% assign
             current_page_number = page.number %} {% assign completion_percentage
@@ -72,6 +71,11 @@
             </div>
           </div>
 
+          <div class="bg-white rounded-lg p-6 mb-6 mt-5">
+            <h1 class="text-2xl font-bold mb-4">Sidebar</h1>
+            {% include adsense.html type="square" %}
+          </div>
+          
           <div class="bg-white rounded-lg p-6 mb-6 mt-5">
             <h1 class="text-2xl font-bold mb-4">Sidebar</h1>
             <ul class="steps steps-vertical">
