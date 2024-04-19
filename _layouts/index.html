@@ -11,9 +11,7 @@
       <section class="bg-primary text-white rounded-lg">
         <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
             <div class="flex flex-col justify-center p-6 text-center rounded-lg lg:max-w-md xl:max-w-lg lg:text-left">
-                <h1 class="text-5xl font-bold leading-tight sm:text-6xl">{{site.title}}
-                    <span class="text-blue-300">Learn</span>Free
-                </h1>
+                <h1 class="text-5xl font-bold leading-tight sm:text-6xl">{{site.title}}                </h1>
                 <p class="mt-6 mb-8 text-lg sm:mb-12">{{site.description}}
                 </p>
                 <div class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
@@ -26,24 +24,26 @@
             </div>
         </div>
     </section>
-      
-      <div class="flex flex-col w-full">
-        <div class="divider"></div>
-      </div>
+     
 
+    <section class="rounded-lg py-8 px-4 md:px-6 lg:px-12 xl:px-24">
+      <div class="p-10 mb-5">
+      <span class="block mb-2 text-xs font-medium tracki uppercase lg:text-left dark:text-violet-400">Start From 0</span>
+      <h2 class="text-5xl font-bold lg:text-left dark:text-gray-50">Start Learning CRMA From Scratch</h2>
+    </div>
       <div class="container mx-auto">
         <div class="flex flex-wrap -mx-4">
           {% for lab in site.labs %}
           <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-6">
-            <div class="card bg-base-100 shadow-xl animate__animated animate__fadeInUp">
+            <div class="card bg-base-100 shadow-xl animate__animated animate__fadeInUp p-6 rounded-lg">
               <a href="{{ lab.url }}">
                 <figure class="px-10 pt-10">
                   <span class="text-5xl font-bold text-primary">{{ lab.number }}</span>
                 </figure>
                 <div class="card-body items-center text-center">
                   <h2 class="card-title text-xl font-bold">{{ lab.title }}</h2>
-                  <p>{{ lab.description }}</p>
-                  <div class="card-actions">
+                  <p class="mt-4">{{ lab.description }}</p>
+                  <div class="card-actions mt-4">
                     <button class="btn btn-primary">Start Learning</button>
                   </div>
                 </div>
@@ -53,53 +53,16 @@
           {% endfor %}
         </div>
       </div>
-      
-
-      <div class="container mx-auto">
-        <div class="flex flex-wrap">
-          <div class="w-1/4 px-4">
-            <!-- Content for column 1 -->
-            <div class="bg-gray-200 p-4">
-              <h2 class="text-xl font-bold">Column 1</h2>
-              <p>This is the content for column 1.</p>
-            </div>
-          </div>
-          <div class="w-1/4 px-4">
-            <!-- Content for column 2 -->
-            <div class="bg-gray-200 p-4">
-              <h2 class="text-xl font-bold">Column 2</h2>
-              <p>This is the content for column 2.</p>
-            </div>
-          </div>
-          <div class="w-1/4 px-4">
-            <!-- Content for column 3 -->
-            <div class="bg-gray-200 p-4">
-              <h2 class="text-xl font-bold">Column 3</h2>
-              <p>This is the content for column 3.</p>
-            </div>
-          </div>
-          <div class="w-1/4 px-4">
-            <!-- Content for column 4 -->
-            <div class="bg-gray-200 p-4">
-              <h2 class="text-xl font-bold">Column 4</h2>
-              <p>This is the content for column 4.</p>
-            </div>
-          </div>
-        </div>
+    
+      <!-- Large Button Centered Below Cards -->
+      <div class=" flex justify-center mt-8 items-center justify-center">
+        <a href="/toc" class="btn btn-lg btn-primary w-full h-40	text-7xl	">Checkout Full Training Program</a>
       </div>
+    </section>
+    
+    
       
-      
-      
-      
-      <div class="flex justify-center my-8">
-        <button class="btn btn-ghost btn-primary text-2xl">Start</button>
-      </div>
-      
-      <div class="flex justify-center my-8">
-        <button class="btn btn-ghost btn-primary text-2xl">Donate</button>
-      </div>
-      
-      <div class="sponsor-section bg-base-300 py-12">
+      <div class="sponsor-section bg-base-300 py-12 mt-5">
         <div class="container mx-auto text-center">
           <h2 class="text-3xl font-bold mb-4">Support Our Work</h2>
           <p class="text-lg">Your support helps us continue creating valuable content. Consider making a donation to keep us going!</p>

@@ -48,20 +48,12 @@
             <!-- Sticky ad placeholder -->
             <div class="hidden lg:block sticky top-0">
               <!-- Responsive ad placeholder -->
-              <div class="h-[600px] bg-gray-200 dark:bg-gray-700">
-                <!-- Your ad code or placeholder content goes here -->
-                <!-- For example, you can add an image -->
-                <img src="path_to_your_ad_image.jpg" alt="Advertisement" class="w-full h-full object-cover">
-              </div>
+              {% include adsense.html type="skyscraper" %}
             </div>
           </div>
         </div>
       </section>
-      
-    
     </main>
-  
-
     {% include footer_row.html %} {% include js.html %}
   </body>
 </html>
